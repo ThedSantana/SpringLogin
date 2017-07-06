@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/LayoutPadrao">
+	<!-- Daqui para cima é a unica coisa além do "<section layout:fragment="conteudo"></section>" 
+	que é obrigatório para a importação do layout padrão -->
+<head>
+	<title>Bem vindo</title>
+</head>
+<body>
+	<section class="container" layout:fragment="conteudo">
+		<div class=" col-sm-10 container-fluid">
+			<h1 id="tadsManager" class="text-capitalize text-center">Bem vindo <span th:text="${#authentication.name}"></span></h1>
+		</div>
+		<div class="col-sm-2">
+			<div id="datepicker"></div>
+		</div>
+	</section>	
+</body>
+</html>
